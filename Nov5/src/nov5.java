@@ -6,12 +6,14 @@ public class nov5 {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Please enter the start time: ");
-		
 		int startTime = extractor(scan.nextLine());
 		
-		String time [] = timeSlots(startTime, 12);
+		System.out.print("Please enter number of students: ");
+		int slots = scan.nextInt();
 		
-		char students [] = studentCreator(12);
+		String time [] = timeSlots(startTime, slots);
+		
+		char students [] = studentCreator(slots);
 		
 		students = randomStudent(students);
 		
